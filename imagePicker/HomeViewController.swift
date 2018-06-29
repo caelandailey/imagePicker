@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// This class is just for demonstration purposes of calling the image picker and receiving selected images
 class HomeViewController: UIViewController, HomeViewDelegate, UIImagePickerControllerDelegate , UINavigationControllerDelegate {
     
     var imagePicker = UIImagePickerController()
@@ -28,6 +29,12 @@ class HomeViewController: UIViewController, HomeViewDelegate, UIImagePickerContr
         view = HomeView()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imagePicker.delegate = self
+        viewHolder.delegate = self
+    }
+    
     func imageButtonPressed() {
         
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum)
@@ -41,11 +48,6 @@ class HomeViewController: UIViewController, HomeViewDelegate, UIImagePickerContr
     
     func apiButtonPressed() {
        navigationController?.pushViewController(ImagePickerViewController(), animated: true)
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        imagePicker.delegate = self
-        viewHolder.delegate = self
     }
     
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

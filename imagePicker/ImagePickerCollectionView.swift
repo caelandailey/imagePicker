@@ -76,18 +76,6 @@ class ImagePickerCollectionView: UICollectionView, UICollectionViewDataSource, U
     var statusImageView: UIImageView?
     let tabBarCoverView = UIView()
     var navBarCoverView = UIView()
-    let selectImageButton: UIButton = {
-        let selectImageButton = UIButton()
-        selectImageButton.setTitle("Select Image", for: .normal)
-        selectImageButton.setTitleColor(.white, for: .normal)
-        selectImageButton.addTarget(self, action: #selector(selectImageButtonPressed), for: .touchUpInside)
-        return selectImageButton
-    }()
-    
-    @objc
-    func selectImageButtonPressed() {
-        print("hereherhehrehrherhehre")
-    }
     
     func animateImageView(imageView: UIImageView) {
 

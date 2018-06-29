@@ -16,16 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
-        //let imagePickerCollectionViewController = ImagePickerCollectionViewController()
- 
-        //let imageNavigationController = UINavigationController(rootViewController: ImagePickerViewController())
+        // Just used to demonstrate functionality
         let imageNavigationController = UINavigationController(rootViewController: HomeViewController())
    
-
         window?.rootViewController = imageNavigationController
-        //window?.rootViewController = ImagePickerViewController()
-        //window?.rootViewController = HomeViewController()
    
         window?.makeKeyAndVisible()
         
