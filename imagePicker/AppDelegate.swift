@@ -11,11 +11,24 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow? = UIWindow()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        //let imagePickerCollectionViewController = ImagePickerCollectionViewController()
+ 
+        //let imageNavigationController = UINavigationController(rootViewController: ImagePickerViewController())
+        let imageNavigationController = UINavigationController(rootViewController: HomeViewController())
+   
+
+        window?.rootViewController = imageNavigationController
+        //window?.rootViewController = ImagePickerViewController()
+        //window?.rootViewController = HomeViewController()
+   
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
